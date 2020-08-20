@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Object</h1>
+    <h2>Create(객체 생성)</h2>
+    <script>
+      var cow = {
+        "programmer" : "egoing",
+        "designer" : "leezche"
+      };
+      document.write("programmer : "+cow.programmer+"<br>");
+      document.write("designer : "+cow.designer+"<br>");
+      cow.bookkeeper = "duru";
+      document.write("bookkeeper : "+cow.bookkeeper+"<br>");
+      cow["data scientist"] = "taeho";
+      document.write("data scientist : "+cow["data scientist"]+"<br>");
+    </script>
+
+
+    <h2>Iterate(반복문)</h2>
+    <script>
+      for(var key in cow){
+        document.write(key+' : ' + cow[key]+'<br>');
+      }
+    </script>
+
+    <h2>Property & Method</h2>
+    <script>
+    cow.showAll = function(){
+      for(var key in cow){
+        
+        document.write(key+' : ' + this[key]+'<br>');
+      }
+    }
+    cow.showAll();
+    </script>
+  </body>
+</html>
